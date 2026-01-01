@@ -23,7 +23,14 @@
     "signInWithGoogle": "Googleでログイン",
     "signInWithApple": "Appleでログイン",
     "welcomeBack": "おかえりなさい",
-    "loginRequired": "ログインが必要です"
+    "loginRequired": "ログインが必要です",
+    "loginTitle": "Bookifyへようこそ",
+    "loginSubtitle": "あなたにぴったりの本を見つけよう",
+    "loginDescription": "ログインして、パーソナライズされた本のおすすめや読書進捗管理を始めましょう。",
+    "continueAsGuest": "ゲストとして続ける",
+    "termsNotice": "ログインすることで、利用規約とプライバシーポリシーに同意したものとみなされます。",
+    "loggingIn": "ログイン中...",
+    "loginError": "ログインに失敗しました。もう一度お試しください。"
   },
   "home": {
     "title": "おすすめの本",

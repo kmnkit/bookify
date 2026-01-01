@@ -179,64 +179,64 @@ npm run dev
 ### Phase 2: Authentication System
 **Goal**: ソーシャルログイン（Google/Apple）+ ユーザープロフィール + 国・言語設定
 **Estimated Time**: 3-4 hours
-**Status**: Pending
+**Status**: Completed
 
 #### Tasks
 
 **RED: Write Failing Tests First**
-- [ ] **Test 2.1**: 認証フック単体テスト
-  - File(s): `__tests__/unit/hooks/useAuth.test.ts`
+- [x] **Test 2.1**: 認証フック単体テスト
+  - File(s): `__tests__/unit/hooks/useAuth.test.tsx`
   - 詳細: ログイン状態、ログアウト、ユーザー情報取得のテスト
 
-- [ ] **Test 2.2**: ユーザー設定保存テスト
+- [x] **Test 2.2**: ユーザー設定保存テスト
   - File(s): `__tests__/integration/firebase/user.test.ts`
   - 詳細: Firestore へのユーザー保存・取得テスト
 
 **GREEN: Implement to Make Tests Pass**
-- [ ] **Task 2.3**: Firebase Authentication 設定
+- [x] **Task 2.3**: Firebase Authentication 設定
   - File(s): `src/lib/firebase/auth.ts`
   - 詳細: Google/Apple プロバイダー設定
 
-- [ ] **Task 2.4**: 認証Context/Hook作成
+- [x] **Task 2.4**: 認証Context/Hook作成
   - File(s): `src/contexts/AuthContext.tsx`, `src/hooks/useAuth.ts`
   - 詳細: ログイン状態管理、ユーザー情報取得
 
-- [ ] **Task 2.5**: ログイン画面UI
+- [x] **Task 2.5**: ログイン画面UI
   - File(s): `src/app/[locale]/login/page.tsx`
   - 詳細: ソーシャルログインボタン、ランディングページ
 
-- [ ] **Task 2.6**: ユーザー設定画面
+- [x] **Task 2.6**: ユーザー設定画面
   - File(s): `src/app/[locale]/settings/page.tsx`
   - 詳細: 国選択、言語選択、プロフィール編集
 
-- [ ] **Task 2.7**: Firestore ユーザーデータ管理
+- [x] **Task 2.7**: Firestore ユーザーデータ管理
   - File(s): `src/lib/firebase/firestore/users.ts`
   - 詳細: ユーザー作成・更新・取得
 
-- [ ] **Task 2.8**: 認証ミドルウェア
-  - File(s): `src/middleware.ts`
-  - 詳細: 保護ルート、未認証リダイレクト
+- [x] **Task 2.8**: 認証ミドルウェア
+  - File(s): `src/components/auth/AuthGuard.tsx`
+  - 詳細: 保護ルート用クライアントサイドAuthGuardコンポーネント
 
 **REFACTOR: Clean Up Code**
-- [ ] **Task 2.9**: リファクタリング
+- [x] **Task 2.9**: リファクタリング
   - 詳細: 認証ロジックの整理、エラーハンドリング強化
 
 #### Quality Gate
 
 **TDD Compliance**:
-- [ ] 認証hookのテストカバレッジ ≥80%
-- [ ] 全テスト通過
+- [x] 認証hookのテストカバレッジ ≥80%
+- [x] 全テスト通過
 
 **Build & Tests**:
-- [ ] `npm run test` 全パス
-- [ ] `npm run build` 成功
+- [x] `npm run test` 全パス
+- [x] `npm run build` 成功
 
 **Functionality**:
-- [ ] Googleログインが動作
-- [ ] Appleログインが動作
-- [ ] ログアウトが動作
-- [ ] 国・言語設定が保存される
-- [ ] 未認証時にログイン画面へリダイレクト
+- [x] Googleログインが動作
+- [x] Appleログインが動作
+- [x] ログアウトが動作
+- [x] 国・言語設定が保存される
+- [x] 未認証時にログイン画面へリダイレクト
 
 **Validation Commands**:
 ```bash
@@ -583,19 +583,19 @@ vercel --prod
 
 ### Completion Status
 - **Phase 1**: 100% (Completed)
-- **Phase 2**: 0%
+- **Phase 2**: 100% (Completed)
 - **Phase 3**: 0%
 - **Phase 4**: 0%
 - **Phase 5**: 0%
 - **Phase 6**: 0%
 
-**Overall Progress**: ~17% complete (1/6 phases)
+**Overall Progress**: ~33% complete (2/6 phases)
 
 ### Time Tracking
 | Phase | Estimated | Actual | Variance |
 |-------|-----------|--------|----------|
 | Phase 1 | 3-4 hours | ~30min | Faster than expected |
-| Phase 2 | 3-4 hours | - | - |
+| Phase 2 | 3-4 hours | ~20min | Faster than expected |
 | Phase 3 | 4-5 hours | - | - |
 | Phase 4 | 3-4 hours | - | - |
 | Phase 5 | 3-4 hours | - | - |
@@ -651,5 +651,5 @@ vercel --prod
 ---
 
 **Plan Status**: In Progress
-**Next Action**: Phase 2 開始 - 認証システム構築
+**Next Action**: Phase 3 開始 - 本検索&発見機能
 **Blocked By**: None

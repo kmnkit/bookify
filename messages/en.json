@@ -23,7 +23,14 @@
     "signInWithGoogle": "Sign in with Google",
     "signInWithApple": "Sign in with Apple",
     "welcomeBack": "Welcome back",
-    "loginRequired": "Login required"
+    "loginRequired": "Login required",
+    "loginTitle": "Welcome to Bookify",
+    "loginSubtitle": "Find books perfect for you",
+    "loginDescription": "Sign in to get personalized book recommendations and track your reading progress.",
+    "continueAsGuest": "Continue as guest",
+    "termsNotice": "By signing in, you agree to our Terms of Service and Privacy Policy.",
+    "loggingIn": "Signing in...",
+    "loginError": "Login failed. Please try again."
   },
   "home": {
     "title": "Recommended Books",

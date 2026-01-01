@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { ThemeProvider } from '@/components/theme-provider'
+import { AuthProvider } from '@/contexts/AuthContext'
 import { Header, BottomNav } from '@/components/layout'
 import { Toaster } from '@/components/ui/sonner'
 import { locales, type Locale } from '@/i18n/config'
@@ -55,12 +56,14 @@ export default async function LocaleLayout({ children, params }: Props) {
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
-            <div className="relative flex min-h-screen flex-col">
-              <Header />
-              <main className="flex-1 pb-20 md:pb-0">{children}</main>
-              <BottomNav />
-            </div>
-            <Toaster />
+            <AuthProvider>
+              <div className="relative flex min-h-screen flex-col">
+                <Header />
+                <main className="flex-1 pb-20 md:pb-0">{children}</main>
+                <BottomNav />
+              </div>
+              <Toaster />
+            </AuthProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
