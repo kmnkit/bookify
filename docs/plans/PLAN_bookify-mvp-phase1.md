@@ -633,6 +633,11 @@ vercel --prod
 
 ### Related Files
 - PRD: `docs/bookify-prd.md`
+- Onboarding Plan: `docs/plans/PLAN_onboarding-optimization.md`
+- Design System: `docs/ui-ux/design-system.md`
+- User Flows: `docs/ui-ux/user-flows.md`
+- Wireframes: `docs/ui-ux/wireframes.md`
+- Accessibility: `docs/ui-ux/accessibility.md`
 
 ---
 
