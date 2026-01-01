@@ -1,0 +1,74 @@
+{
+  "common": {
+    "appName": "Bookify",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "back": "Back"
+  },
+  "nav": {
+    "home": "Home",
+    "search": "Search",
+    "library": "Library",
+    "settings": "Settings"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "signInWithGoogle": "Sign in with Google",
+    "signInWithApple": "Sign in with Apple",
+    "welcomeBack": "Welcome back",
+    "loginRequired": "Login required"
+  },
+  "home": {
+    "title": "Recommended Books",
+    "recommended": "Recommended for you",
+    "trending": "Trending",
+    "newReleases": "New Releases"
+  },
+  "search": {
+    "title": "Search Books",
+    "placeholder": "Search by title, author...",
+    "noResults": "No results found",
+    "results": "{count} results"
+  },
+  "book": {
+    "author": "Author",
+    "publisher": "Publisher",
+    "publishedDate": "Published Date",
+    "pages": "Pages",
+    "like": "Like",
+    "unlike": "Unlike",
+    "addToLibrary": "Add to Library",
+    "aiSummary": "AI Summary",
+    "generateSummary": "Generate Summary",
+    "readingProgress": "Reading Progress",
+    "status": {
+      "wantToRead": "Want to Read",
+      "reading": "Reading",
+      "completed": "Completed"
+    }
+  },
+  "library": {
+    "title": "My Library",
+    "liked": "Liked",
+    "reading": "Reading",
+    "completed": "Completed",
+    "empty": "No books yet"
+  },
+  "settings": {
+    "title": "Settings",
+    "profile": "Profile",
+    "country": "Country",
+    "language": "Language",
+    "theme": "Theme",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "systemMode": "System"
+  }
+}

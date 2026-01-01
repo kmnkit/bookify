@@ -1,0 +1,74 @@
+{
+  "common": {
+    "appName": "Bookify",
+    "loading": "로딩 중...",
+    "error": "오류가 발생했습니다",
+    "retry": "다시 시도",
+    "save": "저장",
+    "cancel": "취소",
+    "delete": "삭제",
+    "edit": "편집",
+    "search": "검색",
+    "back": "뒤로"
+  },
+  "nav": {
+    "home": "홈",
+    "search": "검색",
+    "library": "내 서재",
+    "settings": "설정"
+  },
+  "auth": {
+    "login": "로그인",
+    "logout": "로그아웃",
+    "signInWithGoogle": "Google로 로그인",
+    "signInWithApple": "Apple로 로그인",
+    "welcomeBack": "다시 오셨네요",
+    "loginRequired": "로그인이 필요합니다"
+  },
+  "home": {
+    "title": "추천 도서",
+    "recommended": "당신을 위한 추천",
+    "trending": "인기 도서",
+    "newReleases": "신간"
+  },
+  "search": {
+    "title": "도서 검색",
+    "placeholder": "제목, 저자로 검색...",
+    "noResults": "검색 결과가 없습니다",
+    "results": "{count}개의 결과"
+  },
+  "book": {
+    "author": "저자",
+    "publisher": "출판사",
+    "publishedDate": "출판일",
+    "pages": "페이지",
+    "like": "좋아요",
+    "unlike": "좋아요 취소",
+    "addToLibrary": "내 서재에 추가",
+    "aiSummary": "AI 요약",
+    "generateSummary": "요약 생성",
+    "readingProgress": "독서 진행률",
+    "status": {
+      "wantToRead": "읽고 싶은",
+      "reading": "읽는 중",
+      "completed": "완료"
+    }
+  },
+  "library": {
+    "title": "내 서재",
+    "liked": "좋아요",
+    "reading": "읽는 중",
+    "completed": "완료",
+    "empty": "도서가 없습니다"
+  },
+  "settings": {
+    "title": "설정",
+    "profile": "프로필",
+    "country": "거주 국가",
+    "language": "언어",
+    "theme": "테마",
+    "darkMode": "다크 모드",
+    "lightMode": "라이트 모드",
+    "systemMode": "시스템 설정"
+  }
+}
