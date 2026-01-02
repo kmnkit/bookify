@@ -36,7 +36,11 @@
     "title": "Recommended Books",
     "recommended": "Recommended for you",
     "trending": "Trending",
-    "newReleases": "New Releases"
+    "trendingIn": "Trending in {country}",
+    "newReleases": "New Releases",
+    "seeAll": "See All",
+    "errorLoading": "Failed to load books",
+    "noBooks": "No books available"
   },
   "search": {
     "title": "Search Books",

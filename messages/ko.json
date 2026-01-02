@@ -36,7 +36,11 @@
     "title": "추천 도서",
     "recommended": "당신을 위한 추천",
     "trending": "인기 도서",
-    "newReleases": "신간"
+    "trendingIn": "{country}에서 인기",
+    "newReleases": "신간",
+    "seeAll": "모두 보기",
+    "errorLoading": "도서를 불러오는 데 실패했습니다",
+    "noBooks": "도서가 없습니다"
   },
   "search": {
     "title": "도서 검색",

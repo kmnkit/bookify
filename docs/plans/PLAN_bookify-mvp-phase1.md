@@ -2,7 +2,7 @@
 
 **Status**: 🔄 In Progress
 **Started**: 2026-01-01
-**Last Updated**: 2026-01-01
+**Last Updated**: 2026-01-02
 **Estimated Completion**: -
 
 ---
@@ -250,64 +250,65 @@ npm run lint
 ### Phase 3: Book Search & Discovery
 **Goal**: Google Books API連携 + 本検索 + 本詳細画面 + 国別おすすめ表示
 **Estimated Time**: 4-5 hours
-**Status**: Pending
+**Status**: Completed
 
 #### Tasks
 
 **RED: Write Failing Tests First**
-- [ ] **Test 3.1**: Google Books APIクライアントテスト
+- [x] **Test 3.1**: Google Books APIクライアントテスト
   - File(s): `__tests__/unit/lib/google-books.test.ts`
   - 詳細: 検索、詳細取得、国別フィルタリングのテスト
 
-- [ ] **Test 3.2**: 本検索hookテスト
-  - File(s): `__tests__/unit/hooks/useBookSearch.test.ts`
+- [x] **Test 3.2**: 本検索hookテスト
+  - File(s): `__tests__/unit/hooks/useBookSearch.test.tsx`
   - 詳細: 検索状態、ページネーション、エラーハンドリング
 
 **GREEN: Implement to Make Tests Pass**
-- [ ] **Task 3.3**: Google Books APIクライアント
+- [x] **Task 3.3**: Google Books APIクライアント
   - File(s): `src/lib/google-books/client.ts`, `src/lib/google-books/types.ts`
   - 詳細: API呼び出し、型定義、エラーハンドリング
 
-- [ ] **Task 3.4**: 本検索API Route
-  - File(s): `src/app/api/books/search/route.ts`
+- [x] **Task 3.4**: 本検索API Route
+  - File(s): `src/app/api/books/search/route.ts`, `src/app/api/books/[id]/route.ts`
   - 詳細: サーバーサイドでのAPI呼び出し、レート制限対策
 
-- [ ] **Task 3.5**: 本検索画面UI
+- [x] **Task 3.5**: 本検索画面UI
   - File(s): `src/app/[locale]/search/page.tsx`
-  - 詳細: 検索フォーム、結果一覧、無限スクロール
+  - 詳細: 検索フォーム、結果一覧、Load Moreボタン
 
-- [ ] **Task 3.6**: 本詳細画面UI
-  - File(s): `src/app/[locale]/books/[id]/page.tsx`
-  - 詳細: 本情報表示、表紙画像、説明文
+- [x] **Task 3.6**: 本詳細画面UI
+  - File(s): `src/app/[locale]/books/[id]/page.tsx`, `src/app/[locale]/books/[id]/BookDetailClient.tsx`
+  - 詳細: 本情報表示、表紙画像、説明文、レーティング
 
-- [ ] **Task 3.7**: ホーム画面（国別おすすめ）
-  - File(s): `src/app/[locale]/(main)/page.tsx`
-  - 詳細: 国別ベストセラー、カテゴリ別おすすめ
+- [x] **Task 3.7**: ホーム画面（国別おすすめ）
+  - File(s): `src/app/[locale]/page.tsx`, `src/app/[locale]/HomePageClient.tsx`
+  - 詳細: 国別ベストセラー、カテゴリ別おすすめ、横スクロールカルーセル
 
-- [ ] **Task 3.8**: 本カードコンポーネント
-  - File(s): `src/components/books/BookCard.tsx`, `src/components/books/BookGrid.tsx`
-  - 詳細: 再利用可能な本表示コンポーネント
+- [x] **Task 3.8**: 本カードコンポーネント
+  - File(s): `src/components/books/BookCard.tsx`, `src/components/books/BookGrid.tsx`, `src/components/books/BookCarousel.tsx`
+  - 詳細: 再利用可能な本表示コンポーネント（グリッド/リスト/カルーセル）
 
 **REFACTOR: Clean Up Code**
-- [ ] **Task 3.9**: リファクタリング
+- [x] **Task 3.9**: リファクタリング
   - 詳細: API呼び出しの最適化、キャッシュ戦略、スケルトンローディング
+  - 実装: BookCardSkeleton、BookCarouselSkeleton、HomePageSkeletonを追加
 
 #### Quality Gate
 
 **TDD Compliance**:
-- [ ] APIクライアントテストカバレッジ ≥80%
-- [ ] 全テスト通過
+- [x] APIクライアントテストカバレッジ ≥80%
+- [x] 全テスト通過（69テスト）
 
 **Build & Tests**:
-- [ ] `npm run test` 全パス
-- [ ] `npm run build` 成功
+- [x] `npm run test` 全パス
+- [x] `npm run build` 成功
 
 **Functionality**:
-- [ ] 本検索が動作
-- [ ] 検索結果が正しく表示
-- [ ] 本詳細画面が正しく表示
-- [ ] 国別おすすめが表示
-- [ ] スケルトンローディングが動作
+- [x] 本検索が動作
+- [x] 検索結果が正しく表示
+- [x] 本詳細画面が正しく表示
+- [x] 国別おすすめが表示
+- [x] スケルトンローディングが動作
 
 **Validation Commands**:
 ```bash

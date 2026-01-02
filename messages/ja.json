@@ -36,7 +36,11 @@
     "title": "おすすめの本",
     "recommended": "あなたへのおすすめ",
     "trending": "人気の本",
-    "newReleases": "新刊"
+    "trendingIn": "{country}で人気",
+    "newReleases": "新刊",
+    "seeAll": "すべて見る",
+    "errorLoading": "本の読み込みに失敗しました",
+    "noBooks": "本がありません"
   },
   "search": {
     "title": "本を検索",
