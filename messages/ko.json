@@ -70,7 +70,35 @@
     "liked": "좋아요",
     "reading": "읽는 중",
     "completed": "완료",
-    "empty": "도서가 없습니다"
+    "wantToRead": "읽고 싶은",
+    "empty": "도서가 없습니다",
+    "addToLibrary": "내 서재에 추가",
+    "removeFromLibrary": "내 서재에서 삭제",
+    "readingProgress": "독서 진행률",
+    "completedReading": "완독",
+    "progress": "진행률",
+    "status": {
+      "want_to_read": "읽고 싶은",
+      "reading": "읽는 중",
+      "finished": "완료"
+    },
+    "tabs": {
+      "all": "전체",
+      "reading": "읽는 중",
+      "wantToRead": "읽고 싶은",
+      "finished": "완료"
+    },
+    "emptyStates": {
+      "all": "서재가 비어 있습니다. 책을 검색해 보세요!",
+      "reading": "읽고 있는 책이 없습니다. 무언가를 읽어 보세요!",
+      "wantToRead": "읽고 싶은 책이 없습니다.",
+      "finished": "완독한 책이 없습니다. 계속 읽어 보세요!"
+    },
+    "stats": {
+      "total": "전체",
+      "inProgress": "읽는 중",
+      "completed": "완료"
+    }
   },
   "settings": {
     "title": "설정",

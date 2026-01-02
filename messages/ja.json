@@ -70,7 +70,35 @@
     "liked": "いいね",
     "reading": "読書中",
     "completed": "読了",
-    "empty": "本がありません"
+    "wantToRead": "読みたい",
+    "empty": "本がありません",
+    "addToLibrary": "ライブラリに追加",
+    "removeFromLibrary": "ライブラリから削除",
+    "readingProgress": "読書進捗",
+    "completedReading": "読了済み",
+    "progress": "進捗",
+    "status": {
+      "want_to_read": "読みたい",
+      "reading": "読書中",
+      "finished": "読了"
+    },
+    "tabs": {
+      "all": "すべて",
+      "reading": "読書中",
+      "wantToRead": "読みたい",
+      "finished": "読了"
+    },
+    "emptyStates": {
+      "all": "ライブラリが空です。本を検索してみましょう！",
+      "reading": "読書中の本がありません。何か読み始めましょう！",
+      "wantToRead": "読みたい本がありません。",
+      "finished": "読了した本がありません。読書を続けましょう！"
+    },
+    "stats": {
+      "total": "合計",
+      "inProgress": "読書中",
+      "completed": "読了"
+    }
   },
   "settings": {
     "title": "設定",

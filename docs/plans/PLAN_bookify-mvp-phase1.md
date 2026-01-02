@@ -2,7 +2,7 @@
 
 **Status**: 🔄 In Progress
 **Started**: 2026-01-01
-**Last Updated**: 2026-01-02
+**Last Updated**: 2026-01-02 (Phase 4 Completed)
 **Estimated Completion**: -
 
 ---
@@ -322,67 +322,67 @@ npm run lint
 ### Phase 4: Reading Management
 **Goal**: いいね機能 + 読書進捗管理 + マイライブラリ
 **Estimated Time**: 3-4 hours
-**Status**: Pending
+**Status**: Completed
 
 #### Tasks
 
 **RED: Write Failing Tests First**
-- [ ] **Test 4.1**: いいね機能テスト
-  - File(s): `__tests__/unit/hooks/useLike.test.ts`
-  - 詳細: いいね追加・削除、状態管理
+- [x] **Test 4.1**: いいね機能テスト
+  - File(s): `__tests__/unit/hooks/useLike.test.tsx`
+  - 詳細: いいね追加・削除、状態管理（13テスト）
 
-- [ ] **Test 4.2**: 読書進捗テスト
-  - File(s): `__tests__/unit/hooks/useReadingProgress.test.ts`
-  - 詳細: 進捗更新、ステータス変更
+- [x] **Test 4.2**: 読書進捗テスト
+  - File(s): `__tests__/unit/hooks/useReadingProgress.test.tsx`
+  - 詳細: 進捗更新、ステータス変更（18テスト）
 
-- [ ] **Test 4.3**: Firestore操作テスト
+- [x] **Test 4.3**: Firestore操作テスト
   - File(s): `__tests__/integration/firebase/books.test.ts`
-  - 詳細: ユーザー書籍データのCRUD
+  - 詳細: ユーザー書籍データのCRUD（22テスト）
 
 **GREEN: Implement to Make Tests Pass**
-- [ ] **Task 4.4**: Firestore 書籍データ管理
+- [x] **Task 4.4**: Firestore 書籍データ管理
   - File(s): `src/lib/firebase/firestore/books.ts`
   - 詳細: ユーザーの本データCRUD操作
 
-- [ ] **Task 4.5**: いいねhook
+- [x] **Task 4.5**: いいねhook
   - File(s): `src/hooks/useLike.ts`
-  - 詳細: いいね状態管理、Firestore同期
+  - 詳細: いいね状態管理、Firestore同期、useLike/useLikedBooks
 
-- [ ] **Task 4.6**: 読書進捗hook
+- [x] **Task 4.6**: 読書進捗hook
   - File(s): `src/hooks/useReadingProgress.ts`
-  - 詳細: 進捗率、ステータス管理
+  - 詳細: 進捗率、ステータス管理、useReadingProgress/useUserLibrary
 
-- [ ] **Task 4.7**: いいねボタンコンポーネント
+- [x] **Task 4.7**: いいねボタンコンポーネント
   - File(s): `src/components/books/LikeButton.tsx`
-  - 詳細: アニメーション付きいいねボタン
+  - 詳細: アニメーション付きいいねボタン、LikeButton/LikeButtonControlled
 
-- [ ] **Task 4.8**: 読書進捗スライダー
+- [x] **Task 4.8**: 読書進捗スライダー
   - File(s): `src/components/books/ProgressSlider.tsx`
-  - 詳細: 進捗率入力、ステータス選択
+  - 詳細: 進捗率入力、ステータス選択、ProgressSlider/ProgressBar/ReadingStatusBadge
 
-- [ ] **Task 4.9**: マイライブラリ画面
+- [x] **Task 4.9**: マイライブラリ画面
   - File(s): `src/app/[locale]/library/page.tsx`
-  - 詳細: いいねした本、読書中の本、読了本のタブ表示
+  - 詳細: 読書中・読みたい・読了のタブ表示、統計サマリー
 
 **REFACTOR: Clean Up Code**
-- [ ] **Task 4.10**: リファクタリング
-  - 詳細: 楽観的更新、エラーハンドリング、ローディング状態
+- [x] **Task 4.10**: リファクタリング
+  - 詳細: 楽観的更新、エラーハンドリング、ローディング状態、未使用変数削除
 
 #### Quality Gate
 
 **TDD Compliance**:
-- [ ] 読書管理hookテストカバレッジ ≥80%
-- [ ] 全テスト通過
+- [x] 読書管理hookテストカバレッジ ≥80%
+- [x] 全テスト通過（122テスト）
 
 **Build & Tests**:
-- [ ] `npm run test` 全パス
-- [ ] `npm run build` 成功
+- [x] `npm run test` 全パス
+- [x] `npm run build` 成功
 
 **Functionality**:
-- [ ] いいね追加・削除が動作
-- [ ] 進捗更新が保存される
-- [ ] マイライブラリに本が表示される
-- [ ] タブ切り替えが動作
+- [x] いいね追加・削除が動作
+- [x] 進捗更新が保存される
+- [x] マイライブラリに本が表示される
+- [x] タブ切り替えが動作
 
 **Validation Commands**:
 ```bash
@@ -585,20 +585,20 @@ vercel --prod
 ### Completion Status
 - **Phase 1**: 100% (Completed)
 - **Phase 2**: 100% (Completed)
-- **Phase 3**: 0%
-- **Phase 4**: 0%
+- **Phase 3**: 100% (Completed)
+- **Phase 4**: 100% (Completed)
 - **Phase 5**: 0%
 - **Phase 6**: 0%
 
-**Overall Progress**: ~33% complete (2/6 phases)
+**Overall Progress**: ~67% complete (4/6 phases)
 
 ### Time Tracking
 | Phase | Estimated | Actual | Variance |
 |-------|-----------|--------|----------|
 | Phase 1 | 3-4 hours | ~30min | Faster than expected |
 | Phase 2 | 3-4 hours | ~20min | Faster than expected |
-| Phase 3 | 4-5 hours | - | - |
-| Phase 4 | 3-4 hours | - | - |
+| Phase 3 | 4-5 hours | ~30min | Faster than expected |
+| Phase 4 | 3-4 hours | ~20min | Faster than expected |
 | Phase 5 | 3-4 hours | - | - |
 | Phase 6 | 3-4 hours | - | - |
 | **Total** | 19-25 hours | - | - |

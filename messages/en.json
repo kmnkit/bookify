@@ -70,7 +70,35 @@
     "liked": "Liked",
     "reading": "Reading",
     "completed": "Completed",
-    "empty": "No books yet"
+    "wantToRead": "Want to Read",
+    "empty": "No books yet",
+    "addToLibrary": "Add to Library",
+    "removeFromLibrary": "Remove from Library",
+    "readingProgress": "Reading Progress",
+    "completedReading": "Completed",
+    "progress": "Progress",
+    "status": {
+      "want_to_read": "Want to Read",
+      "reading": "Reading",
+      "finished": "Completed"
+    },
+    "tabs": {
+      "all": "All",
+      "reading": "Reading",
+      "wantToRead": "Want to Read",
+      "finished": "Completed"
+    },
+    "emptyStates": {
+      "all": "Your library is empty. Start by searching for books!",
+      "reading": "No books in progress. Start reading something!",
+      "wantToRead": "No books on your reading list.",
+      "finished": "No completed books yet. Keep reading!"
+    },
+    "stats": {
+      "total": "Total",
+      "inProgress": "In Progress",
+      "completed": "Completed"
+    }
   },
   "settings": {
     "title": "Settings",

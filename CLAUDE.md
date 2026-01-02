@@ -6,11 +6,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Bookify is a multilingual (Japanese/English/Korean) book recommendation and reading progress management web application. It uses Google Books API for book data and Claude API for AI-powered summaries.
 
-**Current Status**: Phase 3 (Book Search & Discovery) - In Progress
+**Current Status**: Phase 5 (AI Summaries) - Pending
 - Phase 1 (Project Foundation): ✅ Completed
 - Phase 2 (Authentication): ✅ Completed
-- Phase 3 (Book Search & Discovery): 🔄 In Progress
-- Phase 4-6: ⏳ Pending
+- Phase 3 (Book Search & Discovery): ✅ Completed
+- Phase 4 (Reading Management): ✅ Completed
+- Phase 5-6: ⏳ Pending
 
 ## Development Workflow
 
@@ -81,7 +82,9 @@ src/
 │   │   ├── BookCard.tsx           # Grid/list variants
 │   │   ├── BookGrid.tsx           # Grid layout
 │   │   ├── BookCarousel.tsx       # Horizontal scroll carousel
-│   │   └── BookCardSkeleton.tsx   # Loading skeletons
+│   │   ├── BookCardSkeleton.tsx   # Loading skeletons
+│   │   ├── LikeButton.tsx         # Like button with animation
+│   │   └── ProgressSlider.tsx     # Reading progress controls
 │   ├── layout/
 │   │   ├── Header.tsx             # App header with nav
 │   │   └── BottomNav.tsx          # Mobile bottom navigation
@@ -92,12 +95,16 @@ src/
 │   └── AuthContext.tsx            # Firebase auth state
 ├── hooks/
 │   ├── useAuth.ts                 # Re-export from AuthContext
-│   └── useBookSearch.ts           # Book search with pagination
+│   ├── useBookSearch.ts           # Book search with pagination
+│   ├── useLike.ts                 # Like state management
+│   └── useReadingProgress.ts      # Reading progress management
 ├── lib/
 │   ├── firebase/
 │   │   ├── config.ts              # Firebase initialization
 │   │   ├── auth.ts                # Auth helpers
-│   │   └── firestore/users.ts     # User data operations
+│   │   └── firestore/
+│   │       ├── users.ts           # User data operations
+│   │       └── books.ts           # Book like & progress operations
 │   ├── google-books/
 │   │   ├── client.ts              # API client & helpers
 │   │   └── types.ts               # TypeScript types
@@ -115,14 +122,17 @@ __tests__/
 ├── unit/
 │   ├── hooks/
 │   │   ├── useAuth.test.tsx       # Auth hook tests (11 tests)
-│   │   └── useBookSearch.test.tsx # Search hook tests (20 tests)
+│   │   ├── useBookSearch.test.tsx # Search hook tests (20 tests)
+│   │   ├── useLike.test.tsx       # Like hook tests (13 tests)
+│   │   └── useReadingProgress.test.tsx # Progress hook tests (18 tests)
 │   ├── lib/
 │   │   └── google-books.test.ts   # API client tests (26 tests)
 │   └── utils/
 │       └── sample.test.ts         # Sample utility tests (3 tests)
 └── integration/
     └── firebase/
-        └── user.test.ts           # Firestore user tests (9 tests)
+        ├── user.test.ts           # Firestore user tests (9 tests)
+        └── books.test.ts          # Firestore books tests (22 tests)
 ```
 
 ## Key Implemented Features
@@ -144,6 +154,19 @@ __tests__/
   - New Releases (newest fiction)
 - Horizontal scroll carousels on mobile
 - Skeleton loading states
+
+### Reading Management (Phase 4)
+- Like/favorite books with optimistic updates
+- Reading progress tracking (0-100%)
+- Reading status management:
+  - Want to Read
+  - Reading
+  - Finished
+- My Library page with tab navigation
+- Stats summary (total, in progress, completed)
+- Firestore integration for user book data
+- Hooks: `useLike`, `useLikedBooks`, `useReadingProgress`, `useUserLibrary`
+- Components: `LikeButton`, `ProgressSlider`, `ProgressBar`, `ReadingStatusBadge`
 
 ### i18n
 - Locale in URL path: `/ja/`, `/en/`, `/ko/`
@@ -191,7 +214,15 @@ __tests__/
 
 - **TDD approach**: Write tests before implementation
 - **Coverage targets**: ≥80% for business logic, ≥75% overall
-- **Current status**: 69 tests passing (26 API + 20 hooks + 11 auth + 9 firebase + 3 utils)
+- **Current status**: 122 tests passing
+  - 26 API client tests
+  - 20 book search hook tests
+  - 13 like hook tests
+  - 18 reading progress hook tests
+  - 11 auth hook tests
+  - 22 Firestore books tests
+  - 9 Firestore user tests
+  - 3 utility tests
 - **Test framework**: Vitest + React Testing Library
 - **Mocking**: vi.fn(), vi.mock() for external dependencies
 

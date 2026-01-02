@@ -14,12 +14,12 @@ A multilingual book recommendation and reading progress management web applicati
 - **Responsive Design** - Mobile-first design with horizontal scroll carousels
 - **Dark Mode** - System-aware theme switching
 - **Loading States** - Skeleton loaders for improved UX
+- **Like/Favorite Books** - Like books with optimistic updates
+- **Reading Progress** - Track reading progress (0-100%) and status (Want to Read, Reading, Finished)
+- **Personal Library** - My Library page with tab navigation and stats summary
 
 ### Coming Soon
 
-- Like/Favorite books
-- Reading progress tracking
-- Personal library management
 - AI-powered book summaries
 
 ## Tech Stack
@@ -110,7 +110,7 @@ src/
 | 1 | Project Foundation | Completed |
 | 2 | Authentication | Completed |
 | 3 | Book Search & Discovery | Completed |
-| 4 | Reading Management | Pending |
+| 4 | Reading Management | Completed |
 | 5 | AI Summaries | Pending |
 | 6 | Final Polish & Deploy | Pending |
 
@@ -127,7 +127,7 @@ npm run test -- --coverage
 npm run test -- __tests__/unit/lib/google-books.test.ts
 ```
 
-Current test coverage: 69 tests passing
+Current test coverage: 122 tests passing
 
 ## Documentation
 
